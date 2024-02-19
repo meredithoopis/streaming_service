@@ -56,13 +56,14 @@ python streaming-socket.py
 docker exec -it spark-master spark-submit --master spark://spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 jobs/spark-streaming.py
 ```
 
-
-## Illustrations
+<details>
+<summary>Illustrations</summary>
 ### Checking the topic in Kafka 
 ![confluent.png](imgs%2Fconfluent.png)
 
 ### Checking the indice in Elasticsearch cloud
 ![elastic.png](imgs%2Felastic.png)
+</details>
 
 
 
