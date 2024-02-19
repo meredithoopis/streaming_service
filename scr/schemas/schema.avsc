@@ -1,0 +1,24 @@
+{
+    "doc": "Schema for streaming news",
+    "fields": [
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "content",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "string"
+      }
+    ],
+    "name": "News_schema",
+    "namespace": "com.hyk",
+    "type": "record"
+  }
