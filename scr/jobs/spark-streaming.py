@@ -6,24 +6,20 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col, when, udf 
 from pyspark.sql.types import StructType, StructField, StringType, FloatType
 
-#with open('../config/config.py', 'r') as f: 
- #   config = f.read()
-    #print(config)
+
 config = {
     "kafka": {
-        "sasl.username": "WI6XZHQSU32ARU4D", 
-        "sasl.password": "AacadYeHho/VrEGCllTCj93f9RVyK+UZpBC00mYYK+bfcROM1SeAm/8aGAFHazAA", 
-        "bootstrap.servers": "pkc-ldvj1.ap-southeast-2.aws.confluent.cloud:9092", 
+        "sasl.username": "confluent_api_key", 
+        "sasl.password": "confluent_secret_key", 
+        "bootstrap.servers": "confluent_server", 
         'security.protocol': 'SASL_SSL', 
         'sasl.mechanisms': 'PLAIN', 
         'session.timeout.ms': 50000
     }, 
     "schema_registry": {
-        "url": "https://psrc-7q7vj.ap-southeast-2.aws.confluent.cloud", 
-        "basic.auth.user.info": "PDG5HG43YEQT5WVN:BJgGZFTa8urycqJnmsfPUoiG/tE5rgjh7ZE3QhnJMgif+KXijXbP1E/HxMfL1TlQ"
-    }
-}
-
+        "url": "confluent_link_schema_registry", 
+        "basic.auth.user.info": "api_key_for_schema_registry:secret_key_for_schema_registry"
+    }}
 
 #Load pipeline 
 classifier = pipeline(model = "SamLowe/roberta-base-go_emotions")
