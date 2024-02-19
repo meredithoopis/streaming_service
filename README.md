@@ -57,7 +57,8 @@ docker exec -it spark-master spark-submit --master spark://spark-master:7077 --p
 ```
 
 <details>
-<summary>Illustrations</summary>
+<summary>##Illustrations</summary>
+
 ### Checking the topic in Kafka 
 ![confluent.png](imgs%2Fconfluent.png)
 
